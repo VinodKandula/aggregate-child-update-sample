@@ -12,7 +12,18 @@ This can be tested by switching the Spring Boot parent version used in the POM a
 |    1.4.x    |    Hopper   |    Error    |
 |    1.5.x    |   Ingalls   |    Error    |
 
-Reproduction
+Integration test reproduction
+-------
+Run the single test class `AggregateChildUpdateSampleApplicationTests` to verify the JSON Patch behavior.
+Unfortunately, I could not figure out a way to write the web integration test so that it compiles on all 
+versions of Spring Boot from 1.3.x to 1.5.x due to deprecations and removals of test annotations.
+
+Therefore, some work of uncommenting and commenting annotations and imports is needed when switching between
+Spring Boot versions. The committed version runs with Spring Boot 1.5.x. 
+To switch to Spring Boot 1.3.x compatible version, uncomment the commented portions and comment the 
+`@SpringBootTest` annotation and import.
+
+Manual reproduction
 --------
 
 Example requests shown using [HTTPie](https://httpie.org/).
@@ -164,7 +175,8 @@ X-Application-Context: application
 }
 ```
 
-### Related links
+Related links
+-------
 
 * https://stackoverflow.com/questions/34843297/modify-onetomany-entity-in-spring-data-rest-without-its-repository
 * https://jira.spring.io/browse/DATAREST-813
