@@ -13,6 +13,8 @@ The bidirectional relationship is not desired other than for the composite key
 this unidirectional while maintaining the composite key including the FK, it seems
 the issue with back-reference to `Post` can be eliminated.
 
+Asked on StackOverflow: https://stackoverflow.com/questions/41999835/spring-data-rest-jpa-update-onetomany-collection-with-composite-key
+
 ### Manual reproduction
 
 After starting the application, using [HTTPie](https://httpie.org/):
