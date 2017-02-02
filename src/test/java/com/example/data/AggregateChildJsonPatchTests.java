@@ -21,7 +21,7 @@ import org.springframework.web.context.WebApplicationContext;
 @SpringBootTest
 //@WebIntegrationTest
 //@SpringApplicationConfiguration(AggregateChildUpdateSampleApplication.class)
-public class AggregateChildUpdateSampleApplicationTests {
+public class AggregateChildJsonPatchTests {
 
 	private static final String CREATE_POST_JSON = "{ \"title\": \"My first post\" }";
 	private static final String REPLACE_COMMENTS_JSON_PATCH = "[{\"op\":\"add\", \"path\":\"/comments\", \"value\":[{\"content\": \"Cool post!\"}]}]";
